@@ -1,0 +1,36 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Feb 27, 2023, 4:12:55 PM
+    Author     : Thanh
+*/
+
+* {
+    /*-fx-background-color: ladder;*/
+    /*-fx-fill: activeborder;*/
+    /*-fx-font-size: 15;*/
+}
+
+GripPane {
+    -fx-font-family: Tahoma;
+    -fx-spacing: 10;
+    -fx-padding: 10;
+    -fx-alignment: CENTER;
+}
+
+
+HBox {
+    -fx-spacing: 150;
+    -fx-alignment: CENTER;
+}
+
+Button {
+    -fx-alignment: CENTER;
+}
+
+
+Button.Search {
+    left: 0;
+}

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="558.0" prefWidth="834.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.myproject.oubus.ListTourAdminController">
+   <bottom>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <GridPane alignment="CENTER" prefHeight="137.0" prefWidth="894.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="593.2000122070312" minWidth="10.0" prefWidth="138.2" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="561.5999801635742" minWidth="10.0" prefWidth="127.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="674.4000183105469" minWidth="10.0" prefWidth="177.60001220703128" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="674.4000183105469" minWidth="0.0" prefWidth="142.99998779296874" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="674.4000183105469" minWidth="10.0" prefWidth="79.80001220703127" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="674.4000183105469" minWidth="10.0" prefWidth="171.00001220703132" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Mã xe" textAlignment="CENTER" GridPane.halignment="CENTER">
+                           <font>
+                              <Font name="Tahoma Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label text="Nơi đi" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+                           <font>
+                              <Font name="Tahoma Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label text="Ngày khởi hành" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Tahoma Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label text="Thời gian khởi hành" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Tahoma Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="noiDiField" prefHeight="2.0" prefWidth="504.0" GridPane.columnIndex="3">
+                           <font>
+                              <Font name="Tahoma" size="17.0" />
+                           </font></TextField>
+                        <TextField fx:id="tgKhoiHanhField" prefHeight="33.0" prefWidth="144.0" promptText="6:00" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Tahoma" size="17.0" />
+                           </font></TextField>
+                        <Label text="Nơi đến" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.halignment="CENTER">
+                           <font>
+                              <Font name="Tahoma Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="noiDenField" prefHeight="2.0" prefWidth="504.0" GridPane.columnIndex="5">
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Tahoma" size="17.0" />
+                           </font></TextField>
+                        <TextField fx:id="giaVeField" prefHeight="2.0" prefWidth="504.0" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Tahoma" size="17.0" />
+                           </font></TextField>
+                        <Label text="Giá vé" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Tahoma Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="ngayKhoiHanhField" showWeekNumbers="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <ComboBox fx:id="cbbmaXe" prefWidth="150.0" GridPane.columnIndex="1" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </GridPane>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mã chuyến đi">
+                     <font>
+                        <Font name="Tahoma Bold" size="17.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="maChuyenDi" strokeType="OUTSIDE" strokeWidth="0.0">
+                     <font>
+                        <Font name="Tahoma Bold" size="17.0" />
+                     </font></Text>
+                  <Button alignment="CENTER" contentDisplay="TOP" lineSpacing="10.0" mnemonicParsing="false" onAction="#add" prefHeight="43.0" prefWidth="130.0" text="Thêm" textAlignment="CENTER" textOverrun="CLIP">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                     <font>
+                        <Font name="Tahoma Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="TOP" lineSpacing="10.0" mnemonicParsing="false" onAction="#update" prefHeight="43.0" prefWidth="130.0" text="Cập nhật" textAlignment="CENTER" textOverrun="CLIP">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                     <font>
+                        <Font name="Tahoma Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="TOP" lineSpacing="10.0" mnemonicParsing="false" onAction="#delete" prefHeight="43.0" prefWidth="130.0" text="Xóa" textAlignment="CENTER" textOverrun="CLIP">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                     <font>
+                        <Font name="Tahoma Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="TOP" lineSpacing="10.0" mnemonicParsing="false" onAction="#ActionLockOut" prefHeight="43.0" prefWidth="130.0" text="Đăng xuất" textAlignment="CENTER" textOverrun="CLIP">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                     <font>
+                        <Font name="Tahoma Bold" size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </bottom>
+   <center>
+      <TableView fx:id="tableChuyenDi" onMouseClicked="#getTour" prefHeight="230.0" prefWidth="834.0" BorderPane.alignment="CENTER" />
+   </center>
+   <top>
+      <VBox alignment="CENTER" prefHeight="78.0" prefWidth="834.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#0040ff" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-stroke: white; -fx-stroke-width: 3;" text="DANH SÁCH CHUYẾN ĐI" textAlignment="CENTER" wrappingWidth="835.0485229492188">
+               <font>
+                  <Font name="Tahoma Bold" size="36.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Text>
+            <TextField fx:id="timKiem" maxWidth="287.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="31.0" prefWidth="300.0" promptText="Tìm kiem chuyen xe" style="-fx-width: 200;">
+               <VBox.margin>
+                  <Insets right="10.0" top="10.0" />
+               </VBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font name="Tahoma" size="17.0" />
+               </font>
+            </TextField>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+   </top>
+</BorderPane>

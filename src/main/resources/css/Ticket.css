@@ -1,0 +1,13 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.ButtonExportTicket {
+    -fx-background-color: #16cc56;
+}
+.ButtonChangeTicket {
+    -fx-background-color: #f4f700;
+}
+.ButtonCancelTicket {
+    -fx-background-color: #e72323;
+}
